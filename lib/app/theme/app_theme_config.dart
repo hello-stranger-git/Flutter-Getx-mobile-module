@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,7 +10,12 @@ class AppThemeConfig {
 
   // 全局颜色配置
   static const Color c_000000 = Color(0xFF000000);
+  static Color c_000000_opacity60 = c_000000.withOpacity(0.6);
+  static Color c_000000_opacity10 = c_000000.withOpacity(0.1);
   static const Color c_0A0A0A = Color(0xFF0A0A0A);
+  static Color c_0A0A0A_opacity60 = c_0A0A0A.withOpacity(0.6);
+
+  static const Color c_FFFFFF = Color(0xFFFFFFFF);
   static const Color c_252525 = Color(0xFF252525);
   static const Color c_F9F9F9 = Color(0xFFF9F9F9);
   static const Color c_868485 = Color(0xFF868485);
@@ -58,6 +63,9 @@ class AppThemeConfig {
   static FontWeight fontWeightLight = FontWeight.w300;
   static FontWeight fontWeightRegular = FontWeight.w400;
   static FontWeight fontWeightMedium = FontWeight.w500;
+
+  // 全局圆角配置
+  static double borderRadius16 = 16.r;
   // 全局大小配置
   // static double paddingSmall = 8.w;
 
