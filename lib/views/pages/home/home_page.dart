@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
             title: Text(TranslationUtil.translate(TranslationKeys.userPageTitle, ['John'])),
           ),
           body: Container(
-            color: AppThemeConfig.primaryColorWithHalfOpacity,
+            // color: AppThemeConfig.primaryColorWithHalfOpacity,
             width: 200.w, 
             height: 200.h,
             child: Column(
