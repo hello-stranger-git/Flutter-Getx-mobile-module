@@ -1,11 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hug/app/theme/app_theme_config.dart';
 import 'package:hug/app/translations/translation_util.dart';
 import 'package:hug/common/constants/image_constants.dart';
+import 'package:hug/common/widgets/dialog/app_apple_alert_dialog.dart';
+import 'package:hug/common/widgets/toast/customToast.dart';
 import 'package:hug/routes/app_routes.dart';
 import 'package:hug/views/pages/home/home_controller.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,7 +51,19 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               // controller.fetchUser();
               // 使用 GetX 进行路由跳转
-                Get.toNamed(AppRoutes.user);
+                // Get.toNamed(AppRoutes.user);
+                // 自动关闭的自定义布局
+                  CustomToast.showCustomToast(
+                    context,
+                    Container(
+                      padding: EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text('错误提示', style: TextStyle(color: Colors.white)),
+                    )
+                  );
             },
             child: const Icon(Icons.refresh),
           ),

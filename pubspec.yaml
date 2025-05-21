@@ -39,6 +39,8 @@ dependencies:
   sprintf: 7.0.0
   # 本地存储
   shared_preferences: ^2.2.2
+  # tips
+  fluttertoast: ^8.2.12
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -12,7 +12,6 @@ class AppAppleAlertDialog extends StatelessWidget {
   final VoidCallback onConfirm;
   final String cancelText; // 自定义取消按钮文案
   final String confirmText; // 自定义确认按钮文案
-  // final double dialogWidth; // 新增属性，用于设置对话框宽度
 
   const AppAppleAlertDialog({
     Key? key,
@@ -20,9 +19,8 @@ class AppAppleAlertDialog extends StatelessWidget {
     required this.content,
     required this.onCancel,
     required this.onConfirm,
-    this.cancelText = '取消', // 默认值为 '取消'
-    this.confirmText = '确认', // 默认值为 '确认'
-    // this.dialogWidth = 300,
+    this.cancelText = '取消',
+    this.confirmText = '确认',
   }) : super(key: key);
 
   @override
@@ -130,4 +128,20 @@ class AppAppleAlertDialog extends StatelessWidget {
   }
 }
 
-// ... existing code ...
+// 示例使用：
+// Get.dialog(
+//   barrierDismissible: false,
+//   AppAppleAlertDialog(
+//       title: '重新发送',
+//       content: '确认要重新发送此消息吗？',
+//       onCancel: () {
+//         print("取消");
+//         // Navigator.pop(context);
+//       },
+//       onConfirm: () {
+//         // 处理确认逻辑
+//         // Navigator.pop(context);
+//         print("确定");
+//       },
+//     )
+// );
